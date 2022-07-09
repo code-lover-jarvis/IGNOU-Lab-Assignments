@@ -4,7 +4,7 @@
 
 int main()
 {
-    int row1, col1, row2, col2, a[10][10], b[10][10], result[10][10], i, j;
+    int row1, col1, row2, col2, a[10][10], b[10][10], result[10][10], i, j, k, pro = 0;
     system("cls");
     printf("Enter the number of Rows of first Matrix: ");
     scanf("%d", &row1);
@@ -51,6 +51,25 @@ int main()
         for( j = 0; j < col2; j++)
         {
             printf("\t%d\t", b[i][j]);
+        }
+        printf("\n");
+    }
+    for( i = 0; i < row1; i++)
+    {
+        for( j = 0; j < col2; j++)
+        {
+            for( k = 0; k < row2; k++)
+            {
+                result[i][j] =+ a[i][k] * b[k][j];
+            }
+        }
+    }
+     printf("\n\nProduct matrix is : \n");
+    for( i = 0; i < row2; i++)
+    {
+        for( j = 0; j < col2; j++)
+        {
+            printf("\t%d\t", result[i][j]);
         }
         printf("\n");
     }

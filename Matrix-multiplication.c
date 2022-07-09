@@ -4,7 +4,8 @@
 
 int main()
 {
-    int row1, col1, row2, col2, a[10][10], b[10][10], result[10][10], i, j, k, pro = 0, res = 0, no_of_mul = 0;
+    int row1, col1, row2, col2, a[10][10], b[10][10], result[10][10], i, j, k, pro = 0, res = 0, //
+    no_of_mul = 0, innermost_loop = 0, outermost_loop = 0;
     system("cls");
     printf("Enter the number of Rows of first Matrix: ");
     scanf("%d", &row1);
@@ -56,10 +57,12 @@ int main()
     }
     for( i = 0; i < row1; i++)
     {
+        ++outermost_loop;
         for( j = 0; j < col2; j++)
         {
             for( k = 0; k < row2; k++)
             {
+                ++innermost_loop;
                 res += a[i][k] * b[k][j];
                 ++no_of_mul;
             }

@@ -76,6 +76,7 @@ int main()
         }
         printf("\n");
     }
+    printf("\n\nNumber of Addition and Multiplication : %d", no_of_mul);
     getch();
     return(0);
 }

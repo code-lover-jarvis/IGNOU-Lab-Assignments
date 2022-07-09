@@ -79,7 +79,7 @@ int main()
         }
         printf("\n");
     }
-    printf("\n\nNumber of Addition and Multiplication : %d", no_of_mul);
+    printf("\n\nNumber of Addition and Multiplication : %d\nInnermost loop count : %d\nOutermost loop count : %d\n", no_of_mul, innermost_loop, outermost_loop);
     getch();
     return(0);
 }

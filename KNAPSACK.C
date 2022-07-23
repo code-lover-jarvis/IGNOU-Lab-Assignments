@@ -12,9 +12,11 @@ void main()
 	struct item K[50];
 	struct item KK;
 	system("cls");
-	printf("\nenter count of items [maximum 50] and the maximum capacity of the bag \t");
+	printf("\nenter count of items [maximum 50] and the maximum capacity\
+of the bag \t");
 	scanf("%d%d",&itemcount,&capacity);
-	printf("\nenter,row-wise [one line per item],the serial number,the weight and the profit for each of the %d items",itemcount);
+	printf("\nenter,row-wise [one line per item],the serial number,the\
+weight and the profit for each of the %d items\n",itemcount);
 	for(i=0;i<itemcount;i++)
 	scanf("%d%d%d",&K[i].id,&K[i].w,&K[i].p);
 	for(i=0;i<itemcount;i++)
@@ -32,17 +34,22 @@ void main()
 			}
 		}
 	}
-	printf("\nThe %d items arranged in nondescending order of the ratio Value=[Profit/Weight]is as under",itemcount);
+	printf("\nThe %d items arranged in nondescending order of the ratio\
+Value=[Profit/Weight]is as under",itemcount);
 	printf("\n\tValue\titem serial number \t Weight\tProfit");
 	for(i=0;i<itemcount;i++)
-		printf("\n\t%0.2f \t\t %d \t\t %d",K[i].value,K[i].id,K[i].w,K[i].p);
+		printf("\n\t%0.2f \t\t %d \t\t %d",K[i].value,K[i].id,K[i].w,
+		K[i].p);
 		printf("\nThe solution to the fractional knapsack problem");
 		for(i=0;i<itemcount;i++)
 		{
 			if(K[i].w+tw<=capacity)
 			{
 				tw+=K[i].w;tv+=K[i].p;
-				printf("\nSelected item %d [whole]\t\tWeight %d\t Profit %d\t\tCumulative Weight\t%d\tCumulative Value\t%0.2f",K[i].id,K[i].w,K[i].p,tw,tv);
+				printf("\nSelected item %d [whole]\t\tWeight\
+%d\t Profit %d\nCumulative Weight\t%d\t\
+Cumulative  Value\t%0.2f",K[i].id,K[i].w,
+				K[i].p,tw,tv);
 			}
 			else
 			{
@@ -50,10 +57,11 @@ void main()
 				partp=(float)w*(float)K[i].p/(float)K[i].w;
 				tw+=w;
 				tv+=partp;
-				printf("\nSelected item %d [part]\t\tWeight%d \t Profit %0.2f \t\tCumulative weight\t%d\tCumulative value \t%0.2f",K[i].id,w,partp,tw,tv);
+				printf("\nSelected item %d [part]\t\tWeight%d \t Profit %0.2f \nCumulative weight\t%d\tCumulative value \t%0.2f",K[i].id,w,partp,tw,tv);
 				break;
 			}
 		}
-	printf("\nThus the knapsack with a capacity of %d can hold items worth a Cumulative Total Value of \t %0.2f",tw, tv);
+	printf("\nThus the knapsack with a capacity of %d can hold items\
+	worth a Cumulative Total Value of \t %0.2f",tw, tv);
 	getch();
 }

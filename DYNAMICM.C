@@ -69,7 +69,6 @@ void main()
      printf("\nEnter the count of Matrices\t");
      scanf("%d", &n);
      for(i = 1; i <= n; i++)
-     {
 	  for(j=i+1; j <= n; j++)
 	  {
 	       m[i][i] = 0;
@@ -106,5 +105,4 @@ void main()
      printf("\nMultiplication Sequence for the %d matrix is", n );
      print_optimal(i, j);
      printf("\n");
-     }
 }
